@@ -164,7 +164,7 @@ FileLedger:
     # Location: The directory to store the blocks in.
     # NOTE: If this is unset, a new temporary location will be chosen every time
     # the orderer is restarted, using the prefix specified by Prefix.
-    Location: production/orderer
+    Location: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/production/orderer
 
     # The prefix to use when generating a ledger directory in temporary space.
     # Otherwise, this value is ignored.
@@ -363,8 +363,8 @@ Consensus:
 
     # WALDir specifies the location at which Write Ahead Logs for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    WALDir: production/orderer/etcdraft/wal
+    WALDir: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/production/orderer/etcdraft/wal
 
     # SnapDir specifies the location at which snapshots for etcd/raft are
     # stored. Each channel will have its own subdir named after channel ID.
-    SnapDir: production/orderer/etcdraft/snapshot
+    SnapDir: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/production/orderer/etcdraft/snapshot
