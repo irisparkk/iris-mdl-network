@@ -2,7 +2,7 @@
 
 export PATH=${PWD}/bin:$PATH
 export PATH=${PWD}/ca-bin:$PATH
-export FABRIC_CFG_PATH=${PWD}/config
+export FABRIC_CFG_PATH=${PWD}/configtx
 export VERBOSE=false
 
 . scripts/utils.sh
