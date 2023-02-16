@@ -296,7 +296,7 @@ peer:
     # Path on the file system where peer will store data (eg ledger). This
     # location must be access control protected to prevent unintended
     # modification that might corrupt the peer operations.
-    fileSystemPath: /var/hyperledger/production
+    fileSystemPath: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/production
 
     # BCCSP (Blockchain crypto provider): Select which crypto implementation or
     # library to use
@@ -471,48 +471,6 @@ peer:
     maxRecvMsgSize: 104857600
     # Max message size in bytes GRPC server and client can send
     maxSendMsgSize: 104857600
-
-###############################################################################
-#
-#    MDL section
-#
-###############################################################################
-mdl:
-    mxp: true
-    # preprocess: true
-    # dbImprovement1: true
-    # dbImprovement2: true
-    # dbImprovement3: true
-    # diskImprovement: true
-    # cacheBlock: true
-    # cacheData: true
-
-    # indexdbbufsize: 10
-    # historydbbufsize: 10
-    # recentblockbufsize: 10
-    # responsedatabufsize : 10
-
-    #chaincodeCache:
-    #    enable: true
-    #    cacheSize: 10
-
-
-    nativeasset: true
-    coin:
-        use: true
-        master: true
-        issue:
-            volume: 50000
-        fee:
-            admin: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp
-        msp:
-            config: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
-        channel:
-            config: .
-        orderer:
-            address: orderer.example.com:7050
-            tls:
-                rootcert: /Users/sujinpark/go/src/github.com/irisparkk/iris-mdl-network/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt
 
 ###############################################################################
 #

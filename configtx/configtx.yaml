@@ -324,14 +324,3 @@ Profiles:
                 - *Org2
             Capabilities:
                 <<: *ApplicationCapabilities
-
-    mdl:
-        Consortium: SampleConsortium
-        <<: *ChannelDefaults
-        Application:
-            <<: *ApplicationDefaults
-            Organizations:
-                - *Org1
-                - *Org2
-            Capabilities:
-                <<: *ApplicationCapabilities

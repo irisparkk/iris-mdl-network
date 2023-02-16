@@ -1,30 +1,4 @@
 #!/bin/bash
-TYPE="$1"
-: ${TYPE:="m"}
-
-############ MDL or Fabric setting ############
-if [ "$TYPE" == "m" ]; then
-    echo "MDL Fabric Orderer Start"
-    export CONFIGTX_ORDERER_BATCHTIMEOUT="2s"
-    export CONFIGTX_ORDERER_BATCHSIZE_MAXMESSAGECOUNT="1500"
-    export CONFIGTX_ORDERER_BATCHSIZE_ABSOLUTEMAXBYTES="98 MB"
-    export CONFIGTX_ORDERER_BATCHSIZE_PREFERREDMAXBYTES="512 KB"
-    
-    export CORE_MDL_MXP=true
-
-    export GRPC_VERBOSITY=error
-    export GRPC_LOG_SEVERITY_LEVEL=error
-    export GRPC_GO_GRPC_VERBOSITY=error
-    export GRPC_GO_LOG_SEVERITY_LEVEL=error
-
-elif [ "$TYPE" == "f" ]; then
-    export CORE_MDL_PEER_MXP=false
-    echo "Fabric Orderer Start"
-else
-    echo "ERROR : The second parameter is process type. [f|m] The default is m."
-    exit 1
-fi
-
 export PATH=${PWD}/bin:$PATH
 export PATH=${PWD}/ca-bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/config
